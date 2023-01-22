@@ -12,12 +12,7 @@ function App() {
   return (
     <div className="App">
       { !isLoggedIn && <Login />}
-      { isLoggedIn && <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='news' element={<News />}/>
-        <Route path='cart' element={<Cart />}/>
-        <Route path='store' element={<Store />}/>
-      </Routes>}
+      { isLoggedIn && <Home />}
     </div>
   );
 }

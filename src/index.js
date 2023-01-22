@@ -3,17 +3,36 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Auth from './Auth';
+import News from './Pages/News/News';
+import Cart from './Pages/Cart/Cart';
+import Store from './Pages/Store/Store';
 
+const router = createBrowserRouter([
+    {
+        path:'/',
+        element:<App />
+    },
+    {
+        path:'news',
+        element:<News />
+    },
+    {
+        path:'cart',
+        element:<Cart />
+    },
+    {
+        path:'store',
+        element:<Store />
+    },
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={Auth}>
-        <Router>
-            <App />
-        </Router>
+        <RouterProvider router={router}/>
     </Provider>
 );
 
