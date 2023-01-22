@@ -1,0 +1,54 @@
+.LoginPage {
+  background-color: rgb(18, 18, 18);
+  height: 100vh;
+  display: flex;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.LoginPage div {
+  display: inline-block;
+}
+.LoginPage .leftDiv {
+  width: 30%;
+  background: url(../../Assets/Images/login.jpg);
+  background-position: center;
+}
+.LoginPage .rightDiv {
+  width: 70%;
+  text-align: center;
+}
+.LoginPage .rightDiv div {
+  width: 50%;
+  text-align: left;
+}
+.LoginPage .rightDiv div h1 {
+  text-align: left;
+}
+.LoginPage .rightDiv div input {
+  background-color: transparent;
+  border: 2px solid grey;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  margin: 5px 0px;
+  font-size: large;
+}
+.LoginPage .rightDiv div input:focus {
+  outline: none;
+  border: 2px solid rgb(0, 106, 255);
+}
+.LoginPage .rightDiv div input:invalid {
+  border: 2px solid rgb(187, 187, 31);
+}
+.LoginPage .rightDiv div button {
+  border: none;
+  color: white;
+  background: rgb(0, 106, 255);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: large;
+  cursor: pointer;
+}/*# sourceMappingURL=Login.module.css.map */

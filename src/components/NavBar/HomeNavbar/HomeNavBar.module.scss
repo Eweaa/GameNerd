@@ -1,0 +1,29 @@
+nav{
+    padding: 20px;
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    h1{
+        display: inline-block;
+        font-size: 50px;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        li{
+            padding: 5px;
+            a:hover{
+                color: $accent-color;
+            }
+        }
+    }
+}

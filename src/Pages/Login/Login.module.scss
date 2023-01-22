@@ -1,0 +1,54 @@
+.LoginPage{
+    background-color: rgb(18, 18, 18);
+    height: 100vh;
+    display: flex;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    div{
+        display: inline-block;
+    }
+    .leftDiv{
+        width: 30%;
+        background: url(../../Assets/Images/login.jpg);
+        background-position: center;
+    }
+    .rightDiv{
+        width: 70%;
+        text-align: center;
+        div{
+            width: 50%;
+            text-align: left;
+            h1{
+                text-align: left;
+            }
+            input{
+                background-color: transparent;
+                border: 2px solid grey;
+                color: white;
+                border-radius: 5px;
+                padding: 5px;
+                display: block;
+                width: 100%;
+                margin: 5px 0px;
+                font-size: large;
+                &:focus{
+                    outline: none;
+                    border: 2px solid rgb(0, 106, 255);
+                }
+                &:invalid{
+                    border: 2px solid rgb(187, 187, 31);
+                }
+            }
+            button{
+                border: none;
+                color: white;
+                background: rgb(0, 106, 255);
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bolder;
+                font-size: large;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.CartPage {
+  background: rgb(18, 18, 18);
+  color: white;
+}
+.CartPage div {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.CartPage section {
+  display: inline-block;
+  padding: 1rem;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.CartPage .CartSection {
+  width: 65%;
+}
+.CartPage .DetailsSection {
+  width: 25%;
+}/*# sourceMappingURL=Cart.module.css.map */

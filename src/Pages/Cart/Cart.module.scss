@@ -1,0 +1,21 @@
+.CartPage{
+    background: rgb(18 , 18, 18);
+    color: white;
+    div{
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    section{
+        display: inline-block;
+        padding: 1rem;
+        border: 1px solid grey;
+        border-radius: 10px;
+    }
+    .CartSection{
+        width: 65%;
+    }
+    .DetailsSection{
+        width: 25%;
+    }
+}

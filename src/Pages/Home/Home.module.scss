@@ -1,0 +1,40 @@
+.Home{
+    width: 100%;
+    background: #111;
+}
+.Background{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .text{
+        position: absolute;
+        color: white;
+        bottom: 30%;
+        left: 10%;
+        width: 40%;
+        text-align: left;
+        text-transform: uppercase;
+        h1{
+            font-size: 50px;
+        }
+    }
+}
+
+.HomeSection{
+    padding: 2rem;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    div{
+        display: flex;
+        justify-content: space-around;
+    }
+}

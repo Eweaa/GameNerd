@@ -1,0 +1,27 @@
+.HomeCard {
+  border: 1px solid red;
+  width: 250px;
+  height: 400px;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.HomeCard a {
+  color: white;
+  text-decoration: none;
+}
+.HomeCard a .Cover {
+  width: 100%;
+  height: 80%;
+}
+.HomeCard a .Cover img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.HomeCard a .Details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+}/*# sourceMappingURL=HomeCard.module.css.map */

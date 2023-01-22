@@ -1,0 +1,39 @@
+.NewsCard{
+    color: white;
+    width: 80%;
+    text-align: left;
+    padding: 20px;
+    h2,p{
+        padding: 20px;
+    }
+    div{
+        display: inline-block;
+    }
+    a{
+    text-decoration: none;
+    color: white;
+    }
+    .NewsImg{
+        width: 20%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    .NewsTxt{
+        width: 80%;
+    }
+    &::after{
+        content: '';
+        height: 1px;
+        display: block;
+        background: white;
+    }
+    &:hover{
+        .NewsImg img{
+            transform: scale(1.2);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}

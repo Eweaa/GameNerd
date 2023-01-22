@@ -1,0 +1,9 @@
+.StorePage {
+  background-color: rgb(18, 18, 18);
+  color: white;
+}
+.StorePage section a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=Store.module.css.map */
