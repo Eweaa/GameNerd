@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomeCard = (props) => (
     <div className={HomeCardCSS.HomeCard}>
-        <Link to='store'>
+        <Link to={['game/', props.title].join('')}>
             <div className={HomeCardCSS.Cover}>
                 <img src={props.img}/>
             </div>

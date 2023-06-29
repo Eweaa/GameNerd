@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-nav {
+.nav {
   padding: 20px;
   position: absolute;
   left: 10%;
@@ -9,22 +8,33 @@ nav {
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
 }
-nav a {
+.nav img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.nav a {
   text-decoration: none;
   color: white;
 }
-nav h1 {
-  display: inline-block;
+.nav h1 {
   font-size: 50px;
+  display: flex;
+  align-items: center;
 }
-nav ul {
+.nav ul {
   list-style-type: none;
   display: flex;
   align-items: center;
 }
-nav ul li {
+.nav ul li {
   padding: 5px;
 }
-nav ul li a:hover {
+.nav ul li a img {
+  width: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.nav ul li a:hover {
   color: rgb(0, 106, 255);
 }/*# sourceMappingURL=HomeNavBar.module.css.map */

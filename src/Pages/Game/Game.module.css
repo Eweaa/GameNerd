@@ -1,0 +1,76 @@
+.Game {
+  display: grid;
+  grid-template-areas: "aside navbar navbar navbar" "aside main main right";
+  grid-template-columns: 2fr 4fr 4fr 3fr;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 10px;
+  background-color: #111111;
+}
+.Game .LA {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+}
+.Game .LA a {
+  text-decoration: none;
+  color: white;
+}
+.Game .LA a img {
+  margin-right: 10px;
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.Game nav {
+  width: 100%;
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Game nav img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Game nav input {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  width: 50%;
+}
+.Game nav input::-moz-placeholder {
+  color: white;
+}
+.Game nav input::placeholder {
+  color: white;
+}
+.Game .Carousel {
+  grid-area: main;
+  overflow: hidden;
+}
+.Game .Carousel video {
+  width: 100%;
+  border-radius: 5px;
+}
+.Game .RA {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+.Game .RA .GD button {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: none;
+  color: white;
+  border-radius: 25px;
+}/*# sourceMappingURL=Game.module.css.map */

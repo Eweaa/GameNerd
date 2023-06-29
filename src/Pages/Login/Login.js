@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { authActions } from "../../Auth/auth-slice";
 import LoginCSS from './Login.module.css';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+    const emailRef = useRef();
+    const passwordRef = useRef();
+
+    const [error, setError] = useState();
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate()
+    
     const dispatch = useDispatch();
     const HandleSubmit = (e) => {
         e.preventDefault();
