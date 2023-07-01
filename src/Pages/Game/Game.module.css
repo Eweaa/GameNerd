@@ -55,6 +55,13 @@
   grid-area: main;
   overflow: hidden;
 }
+.Game .Carousel img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  aspect-ratio: 16/9;
+}
 .Game .Carousel video {
   width: 100%;
   border-radius: 5px;

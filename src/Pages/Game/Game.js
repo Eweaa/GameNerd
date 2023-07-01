@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import GameCSS from './Game.module.css'
 import Logo from '../../Assets/Images/OuterHeaven.png'
 import User from '../../Assets/Images/DRDis.jpg'
@@ -24,29 +24,50 @@ const Game = () => {
         </svg>
     }
 
+    const [index, setIndex] = useState()
+    const imgs = [
+        Logo,User, RDRT
+    ]
+
+    const thetag = {
+        v: <video src={imgs[index]} autoPlay muted loop/>,
+        i: <img src={imgs[index]}/>
+    }
+
+    const [tag, setTag] = useState();
+    let d = thetag.i
+
+    if(index === 2)
+    d = thetag.v
+
     const [heart, setHeart] = useState();
     let Comp = icon.e;
 
     if(heart === true)
     Comp = icon.f
 
-    // const [index, setIndex] = useState()
+    
 
-    // let test = -1;
+    
+    
+    
+    let test = -1;
+    let len = imgs.length
 
-    // const imgs = [
-    //     Logo,User, RDRT
-    // ]
+    const change = () => {
 
-    // const change = () => {
-    //     for(let i=0; i<3; i++){
-    //         setTimeout(() => {
-    //             test++
-    //             console.log(imgs[i], test)
-    //         }, 5000 * i)
-    //     }
-    // }
-    // change()
+        for(let i=0; i<len; i++){
+            setTimeout(() => {
+                setIndex(i)
+            }, 5000 * i)
+        }
+
+        
+    }
+
+    useEffect(() => {
+        change()
+    },[]) 
     
   return (
     <div className={[GameCSS.Game, 'p-4'].join(' ')}>
@@ -65,7 +86,9 @@ const Game = () => {
             </div>
         </nav>
         <div className={GameCSS.Carousel}>
-            <video src={RDRT} autoPlay muted loop/>
+            {d}
+            {/* <img src={imgs[index]}/> */}
+            {/* <video src={imgs[index]} autoPlay muted loop/> */}
         </div>
         <aside className={[GameCSS.RA, 'p-'].join(' ')}>
             <div className={[GameCSS.GD, 'p-2'].join(' ')}>
@@ -77,7 +100,7 @@ const Game = () => {
                         {Comp}
                     </button>
                 </div>
-
+                {/* <img src={imgs[index]}/> */}
             </div>
         </aside>
     </div>
