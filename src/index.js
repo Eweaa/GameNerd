@@ -11,37 +11,44 @@ import Cart from './Pages/Cart/Cart';
 import Store from './Pages/Store/Store';
 import Game from './Pages/Game/Game';
 import MostPopular from './Pages/MostPopular/MostPopular';
+import Login from './Pages/Login/Login';
+import { ProtectedRoute } from './Auth/ProtectedRoute';
+import { AuthProvider } from './Auth/AuthContext';
 
 const router = createBrowserRouter([
     {
+        path:'/login',
+        element: <Login />
+    },
+    {
         path:'/',
-        element:<App />
+        element:<ProtectedRoute><App /></ProtectedRoute> 
     },
     {
         path:'/news',
-        element:<News />
+        element:<ProtectedRoute><News /></ProtectedRoute> 
     },
     {
         path:'/cart',
-        element:<Cart />
+        element:<ProtectedRoute><Cart /></ProtectedRoute> 
     },
     {
         path:'/store',
-        element:<Store />
+        element:<ProtectedRoute><Store /></ProtectedRoute> 
     },
     {
         path:'game/:name',
-        element:<Game />
+        element:<ProtectedRoute><Game /></ProtectedRoute> 
     },
     {
         path:'/most-popular',
-        element:<MostPopular />
+        element:<ProtectedRoute><MostPopular /></ProtectedRoute> 
     }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Provider store={Auth}>
+    <AuthProvider>
         <RouterProvider router={router}/>
-    </Provider>
+    </AuthProvider>
 );

@@ -3,7 +3,6 @@ import GameCSS from './Game.module.css'
 import Logo from '../../Assets/Images/OuterHeaven.png'
 import User from '../../Assets/Images/DRDis.jpg'
 import RDRT from '../../Assets/Videos/RDRT.mp4'
-import SVG from '../../Assets/Images/heart-solid.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { icon } from '@fortawesome/fontawesome-svg-core'
@@ -34,7 +33,6 @@ const Game = () => {
         i: <img src={imgs[index]}/>
     }
 
-    const [tag, setTag] = useState();
     let d = thetag.i
 
     if(index === 2)
@@ -46,28 +44,24 @@ const Game = () => {
     if(heart === true)
     Comp = icon.f
 
-    
-
-    
-    
-    
     let test = -1;
     let len = imgs.length
 
     const change = () => {
-
         for(let i=0; i<len; i++){
             setTimeout(() => {
                 setIndex(i)
             }, 5000 * i)
         }
-
-        
     }
 
     useEffect(() => {
         change()
-    },[]) 
+    }, []) 
+
+    // if(index >= len){
+    //     change()
+    // }
     
   return (
     <div className={[GameCSS.Game, 'p-4'].join(' ')}>

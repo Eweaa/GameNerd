@@ -37,4 +37,14 @@
 }
 .nav ul li a:hover {
   color: rgb(0, 106, 255);
+}
+.nav button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.nav button img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=HomeNavBar.module.css.map */

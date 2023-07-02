@@ -5,7 +5,11 @@
     grid-template-columns: 2fr 4fr 4fr 3fr;
     column-gap: 40px;
     row-gap: 10px;
-    background-color: #111111;
+    // background-color: #111111;
+    // background: linear-gradient(to right, #141E30, #243B55);
+    background: linear-gradient(to right, #232526, #414345);
+    // background: linear-gradient(to right, #333333, #dd1818);
+    // background: linear-gradient(to right, #16222a, #3a6073);
     .LA{
         grid-area: aside;
         display: flex;

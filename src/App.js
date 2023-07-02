@@ -8,11 +8,12 @@ import Login from './Pages/Login/Login';
 import Store from './Pages/Store/Store';
 
 function App() {
-  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  // const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   return (
     <div className="App">
-      { !isLoggedIn && <Login />}
-      { isLoggedIn && <Home />}
+      {/* { !isLoggedIn && <Login />} */}
+      {/* { isLoggedIn && <Home />} */}
+      <Home />
     </div>
   );
 }

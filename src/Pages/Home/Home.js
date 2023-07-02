@@ -14,7 +14,7 @@ const data = [
     },
     {
         title: 'Grand Theft Auto V',
-        price: '59.99',
+        price: '29.99',
         img:'https://m.media-amazon.com/images/I/71hiZqozL2L.jpg'
     },
     {
@@ -39,12 +39,35 @@ const Home = () => (
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </div>
+
         <section className={HomeCSS.HomeSection}>
                 <Link to='/most-popular'>Most Popular</Link>
             <div className="mt-4">
                 {data.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
             </div>
         </section>
+
+        <section className={HomeCSS.HomeSection}>
+                <Link to='/most-popular'>Trending</Link>
+            <div className="mt-4">
+                {data.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+            </div>
+        </section>
+
+        <section className={HomeCSS.HomeSection}>
+                <Link to='/most-popular'>Free Games</Link>
+            <div className="mt-4">
+                {data.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+            </div>
+        </section>
+
+        <section className={HomeCSS.HomeSection}>
+                <Link to='/most-popular'>Most Played</Link>
+            <div className="mt-4">
+                {data.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+            </div>
+        </section>
+
     </div>
 );
 

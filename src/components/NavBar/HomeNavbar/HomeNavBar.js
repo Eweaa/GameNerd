@@ -1,26 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HomeNavBarCSS from './HomeNavBar.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../../Assets/Images/OuterHeaven.png';
 import User from '../../../Assets/Images/DRDis.jpg'
+import { useAuth } from '../../../Auth/AuthContext';
 
-const HomeNavBar = () => (
-    <nav className = {HomeNavBarCSS.nav}>
-        <h1>
-            <img src={Logo}/>
-            <Link to='/' className='mx-2'>Outer Heaven</Link>
-        </h1>
-        <ul>
-            <li><Link to='news'>News</Link></li>
-            <li><Link to='store'>Store</Link></li>
-            <li><Link to='cart'>Cart</Link></li>
-            <li>
-                <Link to='cart'>
-                    <img src={User}/>
-                </Link>
-            </li>
-        </ul>
-    </nav>
-);
+const HomeNavBar = () => {
+
+    const {currentUser, logout} = useAuth();
+    const [error, setError] = useState('')
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            setError(' ')
+            await logout();
+            navigate('/login')
+        } catch {
+            setError('Failed to logout')
+        }
+    }
+
+    return(
+        <nav className = {HomeNavBarCSS.nav}>
+            <h1>
+                <img src={Logo}/>
+                <Link to='/' className='mx-2'>Outer Heaven</Link>
+            </h1>
+            <ul>
+                <li><Link to='news'>News</Link></li>
+                <li><Link to='store'>Store</Link></li>
+                <li><Link to='cart'>Cart</Link></li>
+                <li>
+                    <button onClick={handleLogout}>
+                        <img src={User}/>
+                    </button>
+                </li>
+            </ul>
+        </nav>   
+    )
+};
 
 export default HomeNavBar

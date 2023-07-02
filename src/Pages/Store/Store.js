@@ -6,12 +6,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { CartActions } from "../../Auth/cart-slice";
 
 const Store = () => {
-    const dispatch = useDispatch();
-    const addToCart = () => {
-        dispatch(CartActions.addToCart({
+    // const dispatch = useDispatch();
+    // const addToCart = () => {
+    //     dispatch(CartActions.addToCart({
             
-        }))
-    }
+    //     }))
+    // }
     return(
         <div className={StoreCSS.StorePage}>
             <NavBar />
