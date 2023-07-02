@@ -17,10 +17,11 @@
 .NewsCard .NewsImg {
   width: 20%;
   overflow: hidden;
+  border-radius: 5px;
 }
 .NewsCard .NewsImg img {
+  transition: all ease-in-out 0.5s;
   width: 100%;
-  border-radius: 5px;
 }
 .NewsCard .NewsTxt {
   width: 80%;

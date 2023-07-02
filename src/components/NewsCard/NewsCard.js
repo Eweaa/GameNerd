@@ -8,7 +8,7 @@ const NewsCard = (props) => (
     <div className={NewsCardCSS.NewsCard}>
         <Link to='/'>
             <div className={NewsCardCSS.NewsImg}>
-                <img src={RDR2I}/>        
+                <img src={props.img}/>        
             </div>
             <div className={NewsCardCSS.NewsTxt}>
                 <h2>{props.title}</h2>
