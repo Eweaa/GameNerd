@@ -8,8 +8,8 @@ const HomeCard = (props) => (
             <div className={HomeCardCSS.Cover}>
                 <img src={props.img}/>
             </div>
-            <div className={HomeCardCSS.Details}>
-                <h4>{props.title}</h4>
+            <div className={[HomeCardCSS.Details, 'mt-1'].join(' ')}>
+                <h6>{props.title}</h6>
                 <p>${props.price}</p>
             </div>
         </Link>

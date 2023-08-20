@@ -89,6 +89,9 @@ const Game = () => {
                 <h3>{data.title}</h3>
                 <p>{data.details}</p>
                 <div>
+                    <div style={{width: '100%'}}>
+                        <button style={{width: '100%', borderRadius:'5px'}} className='p-2 mb-2'>Buy Now</button>
+                    </div>
                     <button className='p-2'>Add to Cart</button>
                     <button className='p-2 mx-2' style={{borderRadius:'50%', width:'40px',height:'40px'}} onClick={() => setHeart(!heart)}>
                         {Comp}

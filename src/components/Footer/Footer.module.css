@@ -1,0 +1,14 @@
+.Footer {
+  background: #202020;
+  color: white;
+}
+.Footer a {
+  color: white;
+  text-decoration: none;
+  margin-inline: 6px;
+}
+.Footer button {
+  color: white;
+  background: transparent;
+  border: none;
+}/*# sourceMappingURL=Footer.module.css.map */

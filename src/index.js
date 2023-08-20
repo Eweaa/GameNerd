@@ -14,6 +14,7 @@ import MostPopular from './Pages/MostPopular/MostPopular';
 import Login from './Pages/Login/Login';
 import { ProtectedRoute } from './Auth/ProtectedRoute';
 import { AuthProvider } from './Auth/AuthContext';
+import Home from './Pages/Home/Home';
 
 const router = createBrowserRouter([
     {
@@ -22,27 +23,33 @@ const router = createBrowserRouter([
     },
     {
         path:'/',
-        element:<ProtectedRoute><App /></ProtectedRoute> 
-    },
-    {
-        path:'/news',
-        element:<ProtectedRoute><News /></ProtectedRoute> 
-    },
-    {
-        path:'/cart',
-        element:<ProtectedRoute><Cart /></ProtectedRoute> 
-    },
-    {
-        path:'/store',
-        element:<ProtectedRoute><Store /></ProtectedRoute> 
-    },
-    {
-        path:'game/:name',
-        element:<ProtectedRoute><Game /></ProtectedRoute> 
-    },
-    {
-        path:'/most-popular',
-        element:<ProtectedRoute><MostPopular /></ProtectedRoute> 
+        element:<ProtectedRoute><App /></ProtectedRoute>,
+        children:[
+            {
+                path:'/',
+                element:<Home /> 
+            },
+            {
+                path:'/news',
+                element:<News /> 
+            },
+            {
+                path:'/cart',
+                element:<Cart />
+            },
+            {
+                path:'/store',
+                element:<Store />
+            },
+            {
+                path:'game/:name',
+                element:<Game />
+            },
+            {
+                path:'/most-popular',
+                element:<MostPopular />
+            }
+        ]
     }
 ])
 
