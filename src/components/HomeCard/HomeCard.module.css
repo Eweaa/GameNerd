@@ -2,31 +2,27 @@
   width: 250px;
   height: 400px;
   display: inline-block;
-  border-radius: 10px;
   overflow: hidden;
 }
-.HomeCard a {
-  width: 100%;
-  color: white;
-  text-decoration: none;
-}
-.HomeCard a .Cover {
-  width: 100%;
+.HomeCard .Cover {
+  border-radius: 5px;
   height: 80%;
   overflow: hidden;
 }
-.HomeCard a .Cover img {
+.HomeCard .Cover img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all ease-in-out 0.4s;
 }
-.HomeCard a .Details {
+.HomeCard .Details {
   display: flex;
   flex-direction: column;
   text-align: left;
+  height: 20%;
 }
-.HomeCard a .Details p, .HomeCard a .Details h6 {
+.HomeCard .Details p, .HomeCard .Details h6 {
   margin: 0;
 }
 .HomeCard:hover img {

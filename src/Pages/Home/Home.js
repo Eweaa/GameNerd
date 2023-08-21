@@ -52,6 +52,31 @@ const UC = [
     },
 ]
 
+const FG = [
+    {
+        title: 'PUBG',
+        price: 'Free',
+        img: 'https://cdn.europosters.eu/image/750/posters/pubg-playerunknown-i59195.jpg'
+    },
+    {
+        title: 'Rocket League',
+        price: 'Free',
+        img:'https://i.pinimg.com/originals/b9/5b/a8/b95ba82397861787eb23b03e0b71d407.jpg'
+    },
+    {
+        title: 'Fortnite',
+        price: 'Free',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYNJBuy5qJaOBmM19yk_SnOzag5lASlK8eIw&usqp=CAU'
+    },
+    {
+        title: 'Valorant',
+        price: 'Free',
+        img: 'https://m.media-amazon.com/images/M/MV5BODhkN2U1YzYtODQzZC00MTc5LTlmMmYtYjQ2ZGU2ZmM4YzJkXkEyXkFqcGdeQXVyMTE0MTc4MjU2._V1_FMjpg_UX1000_.jpg'
+    },
+]
+
+
+
 
 
 const Home = () => (
@@ -82,7 +107,7 @@ const Home = () => (
         <section className={HomeCSS.HomeSection}>
                 <Link to='/most-popular'>Free Games</Link>
             <div className="mt-4">
-                {MP.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+                {FG.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
             </div>
         </section>
 

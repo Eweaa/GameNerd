@@ -3,9 +3,11 @@ import GameCSS from './Game.module.css'
 import Logo from '../../Assets/Images/OuterHeaven.png'
 import User from '../../Assets/Images/DRDis.jpg'
 import RDRT from '../../Assets/Videos/RDRT.mp4'
+import RDR1 from '../../Assets/Images/RDR2.jpg'
+import RDR2 from '../../Assets/Images/RDR21.jpg'
+import RDR3 from '../../Assets/Images/RDR22.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { icon } from '@fortawesome/fontawesome-svg-core'
 import { Link } from 'react-router-dom'
 
 
@@ -25,7 +27,7 @@ const Game = () => {
 
     const [index, setIndex] = useState()
     const imgs = [
-        Logo,User, RDRT
+        RDR1, RDR2, RDR3, RDRT
     ]
 
     const thetag = {
@@ -35,7 +37,7 @@ const Game = () => {
 
     let d = thetag.i
 
-    if(index === 2)
+    if(index === 3)
     d = thetag.v
 
     const [heart, setHeart] = useState();
@@ -64,42 +66,115 @@ const Game = () => {
     // }
     
   return (
-    <div className={[GameCSS.Game, 'p-4'].join(' ')}>
-        <aside className={[GameCSS.LA, ''].join(' ')}>
+    <div className={GameCSS.Game}>
+        <nav className={[GameCSS.Nav, 'p-2'].join(' ')}>
             <Link to='/'>
                 <img src={Logo}/>
                 Outer Heaven
             </Link>
-        </aside>
-        <nav>
-            <div style={{width:'100%'}}>
-                <input type='text' placeholder='search' className='p-1'/>
+            <div style={{width:'50%'}}>
+                <input type='text' placeholder='Search' className='p-1'/>
             </div>
             <div>
                 <img src={User}/>
             </div>
         </nav>
-        <div className={GameCSS.Carousel}>
-            {d}
-            {/* <img src={imgs[index]}/> */}
-            {/* <video src={imgs[index]} autoPlay muted loop/> */}
-        </div>
-        <aside className={[GameCSS.RA, 'p-'].join(' ')}>
-            <div className={[GameCSS.GD, 'p-2'].join(' ')}>
-                <h3>{data.title}</h3>
-                <p>{data.details}</p>
-                <div>
-                    <div style={{width: '100%'}}>
-                        <button style={{width: '100%', borderRadius:'5px'}} className='p-2 mb-2'>Buy Now</button>
-                    </div>
-                    <button className='p-2'>Add to Cart</button>
-                    <button className='p-2 mx-2' style={{borderRadius:'50%', width:'40px',height:'40px'}} onClick={() => setHeart(!heart)}>
-                        {Comp}
-                    </button>
-                </div>
+        <div className={[GameCSS.Main, 'p-4'].join(' ')}>
+            <div className={GameCSS.Carousel}>
+                {d}
                 {/* <img src={imgs[index]}/> */}
+                {/* <video src={imgs[index]} autoPlay muted loop/> */}
             </div>
-        </aside>
+            <aside className={[GameCSS.RA, 'p-'].join(' ')}>
+                <div className={[GameCSS.GD, 'p-2'].join(' ')}>
+                    <h3>{data.title}</h3>
+                    <p>{data.details}</p>
+                    <div>
+                        <div style={{width: '100%'}}>
+                            <button style={{width: '100%', borderRadius:'5px'}} className='p-2 mb-2'>Buy Now</button>
+                        </div>
+                        <button className='p-2'>Add to Cart</button>
+                        <button className='p-2 mx-2' style={{borderRadius:'50%', width:'40px',height:'40px'}} onClick={() => setHeart(!heart)}>
+                            {Comp}
+                        </button>
+                    </div>
+                    {/* <img src={imgs[index]}/> */}
+                </div>
+            </aside>
+        </div>
+        <div style={{width:'70%'}} className='p-4'>
+            Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, Red Dead Redemption 2 is an epic tale of honor and loyalty at the dawn of the modern age. Includes Red Dead Redemption 2: Story Mode and Red Dead Online.
+            <h6>
+                Red Dead Redemption 2
+            </h6>
+            <p>
+                Includes Red Dead Redemption 2: Story Mode and Red Dead Online.
+            </p>
+            <p>
+                Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, Red Dead Redemption 2 is an epic tale of honor and loyalty at the dawn of the modern age.
+            </p>
+            <p>
+                America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him.
+            </p>
+            <p>
+                Red Dead Redemption 2 also includes the shared living world of Red Dead Online – forge your own path as you battle lawmen, outlaw gangs and ferocious wild animals to build a life on the American frontier. Build a camp, ride solo or form a posse and explore everything from the snowy mountains in the North to the swamps of the South, from remote outposts to busy farms and bustling towns. Chase down bounties, hunt, fish and trade, search for exotic treasures, run your own underground Moonshine distillery, or become a Naturalist to learn the secrets of the animal kingdom and much more in a world of astounding depth and detail – includes all new features, gameplay content and additional enhancements released since launch.
+            </p>
+            <div>
+                <h3>Ratings</h3>
+            </div>
+            <div className={GameCSS.RequirementsT}>
+                <h3>System Requirements</h3>
+                <div className={[GameCSS.Requirements, 'p-4'].join(' ')}>
+                    <div>
+                        <h6>Minimum</h6>
+                        <p>
+                            <span>OS</span>
+                            Windows 10 - April 2018 Update (v1803)
+                        </p>
+                        <p>
+                            <span>Processor</span>
+                            Intel(R) Core(TM) i5-2500K / AMD FX-6300
+                        </p>
+                        <p>
+                            <span>Memory</span>
+                            8GB
+                        </p>
+                        <p>
+                            <span>Graphics</span>
+                            Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB
+                        </p>
+                        <p>
+                            <span>Storage</span>
+                            150GB
+                        </p>
+
+                    </div>
+                    <div>
+                        <h6>Recommended</h6>
+                        <p>
+                            <span>OS</span>
+                            Windows 10 - April 2018 Update (v1803)
+                        </p>
+                        <p>
+                            <span>Processor</span>
+                            Windows 10 - April 2018 Update (v1803)
+                        </p>
+                        <p>
+                            <span>Memory</span>
+                            12GB
+                        </p>
+                        <p>
+                            <span>Graphics</span>
+                            Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB
+                        </p>
+                        <p>
+                            <span>Storage</span>
+                            150GB
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   )
 }

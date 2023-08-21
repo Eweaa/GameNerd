@@ -20,9 +20,9 @@ const Footer = () => {
                 <div>
                     Follow us on social media
                 </div>
-                <Link>Twitter</Link>
-                <Link>Facebook</Link>
-                <Link>Youtube</Link>
+                <Link style={{marginRight:'0.25rem'}}>Twitter</Link>
+                <Link className='mx-1'>Facebook</Link>
+                <Link className='mx-1'>Youtube</Link>
             </div>
             <button onClick={toTop}>
                 <FontAwesomeIcon icon={faArrowUp} />
@@ -33,9 +33,9 @@ const Footer = () => {
             VAT included in all prices where applicable
         </div>
         <div>
-            <Link>Terms of Service</Link>
-            <Link>Privacy Policy</Link>
-            <Link>Store Refund Policy</Link>
+            <Link style={{marginRight:'0.25rem'}}>Terms of Service</Link> |
+            <Link className='mx-1'> Privacy Policy</Link> |
+            <Link className='mx-1'> Store Refund Policy</Link>
         </div>
     </footer>
   )

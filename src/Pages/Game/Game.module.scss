@@ -1,32 +1,9 @@
 .Game{
-    display: grid;
-    grid-template-areas: 'aside navbar navbar navbar'
-    'aside main main right';
-    grid-template-columns: 2fr 4fr 4fr 3fr;
-    column-gap: 40px;
-    row-gap: 10px;
-    // background-color: #111111;
-    // background: linear-gradient(to right, #141E30, #243B55);
     background: linear-gradient(to right, #232526, #414345);
-    // background: linear-gradient(to right, #333333, #dd1818);
-    // background: linear-gradient(to right, #16222a, #3a6073);
-    .LA{
-        grid-area: aside;
-        display: flex;
-        flex-direction: column;
-        a{
-            text-decoration: none;
-            color: white;
-            img{
-                margin-right: 10px;
-                width: 50px;
-                aspect-ratio: 1 / 1;
-            }
-        }
-    }
-    nav{
+    background: #1c1c1c;
+    color: white;
+    .Nav{
         width: 100%;
-        grid-area: navbar;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -36,6 +13,10 @@
             border-radius: 50%;
             object-fit: cover;
         }
+        a{
+            color: white;
+            text-decoration: none;
+        }
         input{
             background: rgba(255, 255, 255, .15);
             backdrop-filter: blur(5px);
@@ -43,40 +24,88 @@
             border: none;
             outline: none;
             color: white;
-            width: 50%;
+            width: 100%;
             &::placeholder{
                 color: white;
             }
         }
     }
-    .Carousel{
-        grid-area: main;
-        // border: 1px solid red;
-        overflow: hidden;
-        // border-radius: 5px;
-        img{
-            width: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-            aspect-ratio: 16 / 9;
+    .Main{
+        display: flex;
+        justify-content: space-between;
+        // display: grid;
+        // grid-template-areas: 'aside navbar navbar navbar'
+        // 'main main main right';
+        // grid-template-columns: 2fr 4fr 4fr 3fr;
+        // column-gap: 40px;
+        // row-gap: 10px;
+        // background-color: #111111;
+        // background: linear-gradient(to right, #141E30, #243B55);
+        // background: linear-gradient(to right, #333333, #dd1818);
+        // background: linear-gradient(to right, #16222a, #3a6073);
+        .LA{
+            grid-area: aside;
+            display: flex;
+            flex-direction: column;
+            a{
+                text-decoration: none;
+                color: white;
+                img{
+                    margin-right: 10px;
+                    width: 50px;
+                    aspect-ratio: 1 / 1;
+                }
+            }
         }
-        video{
-            width: 100%;
+        .Carousel{
+            grid-area: main;
+            // border: 1px solid red;
+            overflow: hidden;
+            width: 70%;
+            // border-radius: 5px;
+            img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+                aspect-ratio: 16 / 9;
+            }
+            video{
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+        .RA{
+            color: white;
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(5px);
             border-radius: 5px;
+            width: 25%;
+            .GD{
+                button{
+                    background: transparent;
+                    border: 1px solid #9e9e9e;
+                    color: white;
+                    border-radius: 25px;
+                    transition: all ease-in-out 0.2s;
+                    &:hover{
+                        background: rgba(255, 255, 255, .15);
+                        backdrop-filter: blur(5px);
+                        // background: whitesmoke;
+                    }
+                }
+            }
         }
     }
-    .RA{
-        color: white;
-        background: rgba(255, 255, 255, .15);
-        backdrop-filter: blur(5px);
-        border-radius: 5px;;
-        .GD{
-            button{
-                background: rgba(255, 255, 255, .15);
-                backdrop-filter: blur(5px);
-                border: none;
-                color: white;
-                border-radius: 25px;
+    .RequirementsT{
+        .Requirements{
+            display: flex;
+            justify-content: space-around;
+            background: #262626;
+            border-radius: 5px;
+            span, h6{
+                display: block;
+                color: grey;
+                font-weight: bold;
             }
         }
     }
