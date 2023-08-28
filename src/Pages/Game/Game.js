@@ -9,6 +9,7 @@ import RDR3 from '../../Assets/Images/RDR22.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom'
+import CircleRating from '../../components/CircleRating/CircleRating'
 
 
 const Game = () => {
@@ -119,11 +120,15 @@ const Game = () => {
             <p>
                 Red Dead Redemption 2 also includes the shared living world of Red Dead Online – forge your own path as you battle lawmen, outlaw gangs and ferocious wild animals to build a life on the American frontier. Build a camp, ride solo or form a posse and explore everything from the snowy mountains in the North to the swamps of the South, from remote outposts to busy farms and bustling towns. Chase down bounties, hunt, fish and trade, search for exotic treasures, run your own underground Moonshine distillery, or become a Naturalist to learn the secrets of the animal kingdom and much more in a world of astounding depth and detail – includes all new features, gameplay content and additional enhancements released since launch.
             </p>
-            <div>
-                <h3>Ratings</h3>
+            <div className={GameCSS.Ratings}>
+                <h3 className='mb-4'>Ratings</h3>
+                <div className={GameCSS.TheRatings}>
+                    <CircleRating Rating='94%' org='Critics Recommend'/>
+                    <CircleRating Rating='96' org='Top Critic Average'/>
+                </div>
             </div>
-            <div className={GameCSS.RequirementsT}>
-                <h3>System Requirements</h3>
+            <div className={[GameCSS.RequirementsT, 'mt-4'].join(' ')}>
+                <h3 className='mb-4'>System Requirements</h3>
                 <div className={[GameCSS.Requirements, 'p-4'].join(' ')}>
                     <div>
                         <h6>Minimum</h6>

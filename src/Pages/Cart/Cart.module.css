@@ -15,6 +15,11 @@
 }
 .CartPage .CartSection {
   width: 65%;
+  text-align: center;
+}
+.CartPage .CartSection img {
+  width: 40%;
+  margin-inline: auto;
 }
 .CartPage .DetailsSection {
   width: 25%;

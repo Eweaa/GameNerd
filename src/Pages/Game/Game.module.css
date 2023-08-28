@@ -100,4 +100,7 @@
   display: block;
   color: grey;
   font-weight: bold;
+}
+.Game .Ratings .TheRatings {
+  display: flex;
 }/*# sourceMappingURL=Game.module.css.map */
