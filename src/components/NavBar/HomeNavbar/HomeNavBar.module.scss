@@ -49,3 +49,13 @@
         }
     }
 }
+
+@media( width < 500px){
+    .nav{
+        text-align: center;
+        width: auto;
+        h1{
+            display: none;
+        }
+    }
+}

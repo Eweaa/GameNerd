@@ -42,4 +42,10 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+@media (width < 500px) {
+  .text {
+    width: 75% !important;
+  }
 }/*# sourceMappingURL=Home.module.css.map */

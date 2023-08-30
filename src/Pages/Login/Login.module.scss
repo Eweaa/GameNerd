@@ -54,3 +54,19 @@
         }
     }
 }
+
+@media (width < 500px){
+    .leftDiv{
+        display: none !important;
+    }
+    .rightDiv{
+        width: 100% !important;
+        div{
+            margin-top: 40%;
+            text-align: center !important;
+            button{
+                width: 100%;
+            }
+        }
+    }
+}

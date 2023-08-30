@@ -4,7 +4,6 @@
   color: white;
 }
 .Game .Nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +54,6 @@
   aspect-ratio: 1/1;
 }
 .Game .Main .Carousel {
-  grid-area: main;
   overflow: hidden;
   width: 70%;
 }
@@ -103,4 +101,22 @@
 }
 .Game .Ratings .TheRatings {
   display: flex;
+}
+
+@media (width < 500px) {
+  .Nav span {
+    display: none;
+  }
+  .Main {
+    flex-direction: column;
+  }
+  .Main .Carousel {
+    width: 100% !important;
+  }
+  .Main .RA {
+    width: 100% !important;
+  }
+  .RequirementsT .Requirements {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=Game.module.css.map */

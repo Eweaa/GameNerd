@@ -45,3 +45,9 @@
         flex-wrap: wrap;
     }
 }
+
+@media(width < 500px){
+    .text{
+        width: 75% !important;
+    }
+}

@@ -93,7 +93,7 @@ const Home = () => (
         <section className={HomeCSS.HomeSection}>
                 <Link to='/most-popular'>Most Popular</Link>
             <div className="mt-4">
-                {MP.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+                {MP.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
             </div>
         </section>
 

@@ -71,7 +71,9 @@ const Game = () => {
         <nav className={[GameCSS.Nav, 'p-2'].join(' ')}>
             <Link to='/'>
                 <img src={Logo}/>
-                Outer Heaven
+                <span>
+                    Outer Heaven
+                </span>
             </Link>
             <div style={{width:'50%'}}>
                 <input type='text' placeholder='Search' className='p-1'/>

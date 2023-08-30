@@ -3,7 +3,7 @@
     background: #1c1c1c;
     color: white;
     .Nav{
-        width: 100%;
+        // width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -58,7 +58,7 @@
             }
         }
         .Carousel{
-            grid-area: main;
+            // grid-area: main;
             // border: 1px solid red;
             overflow: hidden;
             width: 70%;
@@ -112,6 +112,28 @@
     .Ratings{
         .TheRatings{
             display: flex;
+        }
+    }
+}
+
+@media(width<500px){
+    .Nav{
+        span{
+            display: none;
+        }
+    }
+    .Main{
+        flex-direction: column;
+        .Carousel{
+            width: 100% !important;
+        }
+        .RA{
+            width: 100% !important;
+        }
+    }
+    .RequirementsT{
+        .Requirements{
+            width: 100% !important;
         }
     }
 }

@@ -53,4 +53,20 @@
   font-weight: bolder;
   font-size: large;
   cursor: pointer;
+}
+
+@media (width < 500px) {
+  .leftDiv {
+    display: none !important;
+  }
+  .rightDiv {
+    width: 100% !important;
+  }
+  .rightDiv div {
+    margin-top: 40%;
+    text-align: center !important;
+  }
+  .rightDiv div button {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Login.module.css.map */
