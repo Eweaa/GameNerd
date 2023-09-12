@@ -116,7 +116,7 @@
     }
 }
 
-@media(width<500px){
+@media(width < 500px){
     .Nav{
         span{
             display: none;
@@ -129,6 +129,9 @@
         }
         .RA{
             width: 100% !important;
+            .GD{
+                width: 100% !important;
+            }
         }
     }
     .RequirementsT{

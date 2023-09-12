@@ -1,11 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeCSS from './Home.module.css';
 import HomeNavBar from "../../components/NavBar/HomeNavbar/HomeNavBar";
 import BV from '../../Assets/Videos/TheBeautyOfDeathStranding.mp4';
 import HomeCard from "../../components/HomeCard/HomeCard";
 import { Link } from "react-router-dom";
-import RDR2 from '../../Assets/Images/RDR2.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import RDR2 from '../../Assets/Images/RDR2.jpg';
+import { useEffect } from "react";
 
+
+const MP2 = [
+    {
+        title: 'Red Dead Redemption 2',
+        price: '59.99',
+        img: 'https://m.media-amazon.com/images/I/71xnh5WM+GL._AC_SL1200_.jpg'
+    },
+    {
+        title: 'Grand Theft Auto V',
+        price: '29.99',
+        img:'https://m.media-amazon.com/images/I/51MFu2e82VL.jpg'
+    },
+    {
+        title: 'The Elder Scrolls V: Skyrim',
+        price: '9.99',
+        img: 'https://m.media-amazon.com/images/I/51v1IWrWhPL.jpg'
+    },
+    {
+        title: 'Death Stranding',
+        price: '39.99',
+        img: 'https://sm.ign.com/ign_nordic/gallery/d/death-stra/death-stranding-5-new-character-posters_vssf.jpg'
+    },
+    {
+        title: 'Red Dead Redemption 2',
+        price: '59.99',
+        img: 'https://m.media-amazon.com/images/I/71xnh5WM+GL._AC_SL1200_.jpg'
+    },
+    {
+        title: 'Grand Theft Auto V',
+        price: '29.99',
+        img:'https://m.media-amazon.com/images/I/51MFu2e82VL.jpg'
+    },
+    {
+        title: 'The Elder Scrolls V: Skyrim',
+        price: '9.99',
+        img: 'https://m.media-amazon.com/images/I/51v1IWrWhPL.jpg'
+    },
+    {
+        title: 'Death Stranding',
+        price: '39.99',
+        img: 'https://sm.ign.com/ign_nordic/gallery/d/death-stra/death-stranding-5-new-character-posters_vssf.jpg'
+    },
+    {
+        title: 'Red Dead Redemption 2',
+        price: '59.99',
+        img: 'https://m.media-amazon.com/images/I/71xnh5WM+GL._AC_SL1200_.jpg'
+    },
+    {
+        title: 'Grand Theft Auto V',
+        price: '29.99',
+        img:'https://m.media-amazon.com/images/I/51MFu2e82VL.jpg'
+    },
+    {
+        title: 'The Elder Scrolls V: Skyrim',
+        price: '9.99',
+        img: 'https://m.media-amazon.com/images/I/51v1IWrWhPL.jpg'
+    },
+    {
+        title: 'Death Stranding',
+        price: '39.99',
+        img: 'https://sm.ign.com/ign_nordic/gallery/d/death-stra/death-stranding-5-new-character-posters_vssf.jpg'
+    },
+]
 const MP = [
     {
         title: 'Red Dead Redemption 2',
@@ -46,7 +112,7 @@ const UC = [
         img: 'https://images.immediate.co.uk/production/volatile/sites/3/2023/05/Mortal-Kombat-1-release-date-88003ec.jpg?quality=90&resize=980,654'
     },
     {
-        title: 'Death Stranding',
+        title: `Assassin's Creed Mirage`,
         price: '39.99',
         img: 'https://store-images.s-microsoft.com/image/apps.23659.14135771392422555.5ce715a2-1c1c-4b01-aed8-c2e964c55efc.005cb1b5-f46f-43e0-a800-7bbe3bbf96b1?w=400&h=600'
     },
@@ -76,10 +142,49 @@ const FG = [
 ]
 
 
+const Home = () => {
+    
+    const [test, setTest] = useState(0);
+    const [margin, setMargin] = useState(100);
+    const [limit, setLimit] = useState(MP2.length);
 
+    const forward = () => {
+        let margin;
+        if(window.innerWidth > 500){
+            margin = 25;
+        }
+        else{
+            margin = 100;
+        }
+        const theLimit = limit * - margin;
+        console.log(limit, theLimit)
+        if(test !== theLimit)
+        setTest(test - margin);
+        if(test === theLimit)
+        setTest(0)
+    }
 
+    const backward = () => {
+        if(test !== 0)
+        setTest(test + margin);
+    }
 
-const Home = () => (
+    const limits = () => {
+        const x = window.innerWidth;
+        if(x < 500)
+        setLimit(limit - 1)
+        if(x > 500)
+        {
+            setMargin(25)
+            setLimit(limit - 4)
+        }
+    }
+
+    useEffect(() => {
+        limits();
+    }, [])
+
+  return (
     <div className={HomeCSS.Home}>
         <HomeNavBar />
         <div className={HomeCSS.Background}>
@@ -90,35 +195,48 @@ const Home = () => (
             </div>
         </div>
 
-        <section className={HomeCSS.HomeSection}>
+        <section className={[HomeCSS.Container, 'mt-4'].join(' ')}>
+            <button onClick={backward}>
+                <FontAwesomeIcon style={{color: 'white'}} icon={faArrowLeft} />
+            </button>
+            <div className={HomeCSS.Slider} style={{translate: `${test}%`}}>
+                {MP2.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
+            </div>
+            <button onClick={forward}>
+                <FontAwesomeIcon style={{color: 'white'}} icon={faArrowRight} />
+            </button>
+        </section>
+        
+        <section className={[HomeCSS.HomeSection, 'p-4'].join(' ')}>
                 <Link to='/most-popular'>Most Popular</Link>
             <div className="mt-4">
                 {MP.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
             </div>
         </section>
 
-        <section className={HomeCSS.HomeSection}>
+        <section className={[HomeCSS.HomeSection, 'p-4'].join(' ')}>
                 <Link to='/most-popular'>Upcoming Titles</Link>
             <div className="mt-4">
-                {UC.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+                {UC.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
             </div>
         </section>
 
-        <section className={HomeCSS.HomeSection}>
+        <section className={[HomeCSS.HomeSection, 'p-4'].join(' ')}>
                 <Link to='/most-popular'>Free Games</Link>
             <div className="mt-4">
-                {FG.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+                {FG.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
             </div>
         </section>
 
-        <section className={HomeCSS.HomeSection}>
+        <section className={[HomeCSS.HomeSection, 'p-4'].join(' ')}>
                 <Link to='/most-popular'>Most Played</Link>
             <div className="mt-4">
-                {MP.map((d) => <HomeCard title={d.title} price={d.price} img={d.img}/>)}
+                {MP.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
             </div>
         </section>
 
     </div>
-);
+  )
+}
 
-export default Home;
+export default Home

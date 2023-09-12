@@ -32,7 +32,7 @@
 }
 
 .HomeSection{
-    padding: 2rem;
+    // padding: 2rem;
     a{
         font-weight: bold;
         font-size: larger;
@@ -49,5 +49,71 @@
 @media(width < 500px){
     .text{
         width: 75% !important;
+    }
+    .HomeSection{
+        
+        a{
+            font-weight: bold;
+            font-size: larger;
+            color: white;
+            text-decoration: none;
+        }
+        & > div{
+            display: grid;
+            width: 300px;
+            grid-auto-flow: column;
+            scroll-behavior: auto;
+            gap: 1.2rem;
+            overflow-y: auto;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            & > a {
+                scroll-snap-align: start;
+            }
+        }
+        div{
+            width: 100% !important;
+            // overflow: scroll;
+        }
+    }
+}
+
+.Container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    button{
+        z-index: 10;
+        width: 10%;
+        background: #111111;
+        border: none;
+    }
+    .Slider{
+        width: 90%;
+        display: flex;
+        // overflow: ;
+        // translate: -50%;
+        transition: all ease-in-out 0.4s;
+        & > a{
+            flex: 0 0 25%;
+            max-width: 25%;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+        }
+    }
+}
+
+@media(width < 500px){
+    .Slider{
+        width: 80% !important;
+        display: flex;
+        transition: all ease-in-out 0.4s;
+        & > a{
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
     }
 }

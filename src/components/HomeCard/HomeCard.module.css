@@ -27,4 +27,10 @@
 }
 .HomeCard:hover img {
   transform: scale(1.1);
+}
+
+@media (width < 500px) {
+  .HomeCard {
+    min-width: 250px;
+  }
 }/*# sourceMappingURL=HomeCard.module.css.map */

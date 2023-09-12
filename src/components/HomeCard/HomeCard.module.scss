@@ -3,6 +3,8 @@
 }
 .HomeCard{
     // border: 1px solid red;
+    // min-width: 250px;
+    // max-width: 250px;
     width: 250px;
     height: 400px;
     display: inline-block;
@@ -32,5 +34,12 @@
     }
     &:hover img{
         transform: scale(1.1);
+    }
+}
+
+@media(width < 500px){
+    .HomeCard{
+        min-width: 250px;
+        // margin-inline: 10px;
     }
 }

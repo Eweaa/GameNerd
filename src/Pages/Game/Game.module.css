@@ -116,6 +116,9 @@
   .Main .RA {
     width: 100% !important;
   }
+  .Main .RA .GD {
+    width: 100% !important;
+  }
   .RequirementsT .Requirements {
     width: 100% !important;
   }
