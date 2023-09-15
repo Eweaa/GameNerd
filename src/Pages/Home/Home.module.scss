@@ -50,33 +50,33 @@
     .text{
         width: 75% !important;
     }
-    .HomeSection{
+    // .HomeSection{
         
-        a{
-            font-weight: bold;
-            font-size: larger;
-            color: white;
-            text-decoration: none;
-        }
-        & > div{
-            display: grid;
-            width: 300px;
-            grid-auto-flow: column;
-            scroll-behavior: auto;
-            gap: 1.2rem;
-            overflow-y: auto;
-            overscroll-behavior-x: contain;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            & > a {
-                scroll-snap-align: start;
-            }
-        }
-        div{
-            width: 100% !important;
-            // overflow: scroll;
-        }
-    }
+    //     a{
+    //         font-weight: bold;
+    //         font-size: larger;
+    //         color: white;
+    //         text-decoration: none;
+    //     }
+    //     & > div{
+    //         display: grid;
+    //         width: 300px;
+    //         grid-auto-flow: column;
+    //         scroll-behavior: auto;
+    //         gap: 1.2rem;
+    //         overflow-y: auto;
+    //         overscroll-behavior-x: contain;
+    //         scroll-snap-type: x mandatory;
+    //         scrollbar-width: none;
+    //         & > a {
+    //             scroll-snap-align: start;
+    //         }
+    //     }
+    //     div{
+    //         width: 100% !important;
+    //         // overflow: scroll;
+    //     }
+    // }
 }
 
 .Container{

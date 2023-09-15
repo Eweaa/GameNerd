@@ -45,29 +45,6 @@
   .text {
     width: 75% !important;
   }
-  .HomeSection a {
-    font-weight: bold;
-    font-size: larger;
-    color: white;
-    text-decoration: none;
-  }
-  .HomeSection > div {
-    display: grid;
-    width: 300px;
-    grid-auto-flow: column;
-    scroll-behavior: auto;
-    gap: 1.2rem;
-    overflow-y: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-  .HomeSection > div > a {
-    scroll-snap-align: start;
-  }
-  .HomeSection div {
-    width: 100% !important;
-  }
 }
 .Container {
   width: 100%;
