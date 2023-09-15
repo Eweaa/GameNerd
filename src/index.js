@@ -15,6 +15,7 @@ import Login from './Pages/Login/Login';
 import { ProtectedRoute } from './Auth/ProtectedRoute';
 import { AuthProvider } from './Auth/AuthContext';
 import Home from './Pages/Home/Home';
+import store from './store';
 
 const router = createBrowserRouter([
     {
@@ -56,6 +57,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <AuthProvider>
-        <RouterProvider router={router}/>
+        <Provider store={store}>
+            <RouterProvider router={router}/>
+        </Provider>
     </AuthProvider>
 );

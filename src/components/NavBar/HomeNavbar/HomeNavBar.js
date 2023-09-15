@@ -4,8 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../../Assets/Images/OuterHeaven.png';
 import User from '../../../Assets/Images/DRDis.jpg'
 import { useAuth } from '../../../Auth/AuthContext';
+import { useSelector } from 'react-redux';
 
 const HomeNavBar = () => {
+
+    const cart = useSelector((state) => state.value);
 
     const {currentUser, logout} = useAuth();
     const [error, setError] = useState('')
@@ -30,7 +33,7 @@ const HomeNavBar = () => {
             <ul>
                 <li><Link to='news'>News</Link></li>
                 <li><Link to='store'>Store</Link></li>
-                <li><Link to='cart'>Cart</Link></li>
+                <li><Link to='cart'>Cart {cart}</Link></li>
                 <li>
                     <button onClick={handleLogout}>
                         <img src={User}/>

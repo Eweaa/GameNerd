@@ -9,10 +9,15 @@ import RDR3 from '../../Assets/Images/RDR22.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom'
-import CircleRating from '../../components/CircleRating/CircleRating'
+import CircleRating from '../../components/CircleRating/CircleRating';
+import { useDispatch } from 'react-redux'
+import { actions } from '../../store'
 
 
 const Game = () => {
+
+    const dispatch = useDispatch();
+    const add = () => dispatch(actions.add())
 
     const data = {
         title:'Red Dead Redemption 2',
@@ -96,7 +101,7 @@ const Game = () => {
                         <div style={{width: '100%'}}>
                             <button style={{width: '100%', borderRadius:'5px'}} className='p-2 mb-2'>Buy Now</button>
                         </div>
-                        <button className='p-2'>Add to Cart</button>
+                        <button className='p-2' onClick={add}>Add to Cart</button>
                         <button className='p-2 mx-2' style={{borderRadius:'50%', width:'40px',height:'40px'}} onClick={() => setHeart(!heart)}>
                             {Comp}
                         </button>

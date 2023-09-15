@@ -1,32 +1,53 @@
-.HomeCard {
+.CardContainer .HCB {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  border: 2px solid grey;
+  font-weight: bold;
+  color: grey;
+  transition: all ease-in-out 0.2s;
+}
+.CardContainer .HomeCard {
+  position: relative;
   width: 250px;
   height: 400px;
   display: inline-block;
   overflow: hidden;
 }
-.HomeCard .Cover {
+.CardContainer .HomeCard .Cover {
+  position: relative;
   border-radius: 5px;
   height: 80%;
   overflow: hidden;
 }
-.HomeCard .Cover img {
+.CardContainer .HomeCard .Cover img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all ease-in-out 0.4s;
 }
-.HomeCard .Details {
+.CardContainer .HomeCard .Details {
   display: flex;
   flex-direction: column;
   text-align: left;
   height: 20%;
 }
-.HomeCard .Details p, .HomeCard .Details h6 {
+.CardContainer .HomeCard .Details p, .CardContainer .HomeCard .Details h6 {
   margin: 0;
 }
-.HomeCard:hover img {
+.CardContainer:hover img {
   transform: scale(1.1);
+}
+.CardContainer:hover .HCB {
+  opacity: 1;
 }
 
 @media (width < 500px) {

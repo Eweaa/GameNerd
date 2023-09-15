@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import SliderCSS from './Slider.module.css';
 import HomeCard from '../HomeCard/HomeCard';
+import SliderCard from '../SliderCard/SliderCard';
 import { useEffect } from 'react';
 
 const Slider = ({data}) => {
@@ -64,7 +65,7 @@ const Slider = ({data}) => {
             <FontAwesomeIcon style={{color: 'white'}} icon={faArrowLeft} />
         </button>
         <div className={SliderCSS.Slider} style={{translate: `${test}%`}}>
-            {data.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
+            {data.map((d, index) => <SliderCard key={index} title={d.title} price={d.price} img={d.img}/>)}
         </div>
         <button onClick={forward}>
             <FontAwesomeIcon style={{color: 'white'}} icon={faArrowRight} />

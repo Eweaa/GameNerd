@@ -2,21 +2,27 @@ import React from "react";
 import CartCSS from './Cart.module.css';
 import NavBar from "../../components/NavBar/NavBar/NavBar";
 import cartsvg from '../../Assets/Images/cart.svg'
+import { useSelector } from "react-redux";
 
 const Cart = () => {
 
-    const data = []
+    const data = useSelector((state) => state.value)
 
     const cart = {
         e:'Your Cart Is Empty',
-        f: 'There Something In Your Cart'
+        o: 'There is a Game In Your Cart',
+        f: `There are ${data} Games In Your Cart`,
     }
 
     let comp;
 
-    if( data.length === 0 )
+    if(data === 0)
     {
         comp = cart.e
+    }
+    else if(data === 1)
+    {
+        comp = cart.o
     }
     else
     {

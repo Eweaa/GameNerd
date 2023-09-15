@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import HomeCSS from './Home.module.css';
 import HomeNavBar from "../../components/NavBar/HomeNavbar/HomeNavBar";
 import BV from '../../Assets/Videos/TheBeautyOfDeathStranding.mp4';
 import HomeCard from "../../components/HomeCard/HomeCard";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import RDR2 from '../../Assets/Images/RDR2.jpg';
-import { useEffect } from "react";
-import Slider from "../../components/Slider/Slider";
+import { useDispatch } from "react-redux";
+import { actions } from "../../store";
+
 
 
 const MP2 = [
@@ -144,47 +142,6 @@ const FG = [
 
 
 const Home = () => {
-    
-    // const [test, setTest] = useState(0);
-    // const [margin, setMargin] = useState(100);
-    // const [limit, setLimit] = useState(MP2.length);
-
-    // const forward = () => {
-    //     let margin;
-    //     if(window.innerWidth > 500){
-    //         margin = 25;
-    //     }
-    //     else{
-    //         margin = 100;
-    //     }
-    //     const theLimit = limit * - margin;
-    //     console.log(limit, theLimit)
-    //     if(test !== theLimit)
-    //     setTest(test - margin);
-    //     if(test === theLimit)
-    //     setTest(0)
-    // }
-
-    // const backward = () => {
-    //     if(test !== 0)
-    //     setTest(test + margin);
-    // }
-
-    // const limits = () => {
-    //     const x = window.innerWidth;
-    //     if(x < 500)
-    //     setLimit(limit - 1)
-    //     if(x > 500)
-    //     {
-    //         setMargin(25)
-    //         setLimit(limit - 4)
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     limits();
-    // }, [])
-
   return (
     <div className={HomeCSS.Home}>
         <HomeNavBar />
@@ -195,21 +152,6 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </div>
-
-        {/* <Slider data ={MP2}/> */}
-
-        {/* <section className={[HomeCSS.Container, 'mt-4'].join(' ')}>
-            <button onClick={backward}>
-                <FontAwesomeIcon style={{color: 'white'}} icon={faArrowLeft} />
-            </button>
-            <div className={HomeCSS.Slider} style={{translate: `${test}%`}}>
-                {MP2.map((d, index) => <HomeCard key={index} title={d.title} price={d.price} img={d.img}/>)}
-            </div>
-            <button onClick={forward}>
-                <FontAwesomeIcon style={{color: 'white'}} icon={faArrowRight} />
-            </button>
-        </section> */}
-        
         <section className={[HomeCSS.HomeSection, 'p-4'].join(' ')}>
                 <Link to='/most-popular'>Most Popular</Link>
             <div className="mt-4">
