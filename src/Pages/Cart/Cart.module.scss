@@ -22,5 +22,14 @@
     }
     .DetailsSection{
         width: 25%;
+        height: fit-content;
+        button{
+            display: block;
+            width: 100%;
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
     }
 }

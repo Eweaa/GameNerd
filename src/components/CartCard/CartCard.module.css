@@ -1,0 +1,9 @@
+.CartCard {
+  width: 100%;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+.CartCard img {
+  width: 100% !important;
+}/*# sourceMappingURL=CartCard.module.css.map */
