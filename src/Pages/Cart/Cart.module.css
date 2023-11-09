@@ -1,6 +1,7 @@
 .CartPage {
   background: rgb(18, 18, 18);
   color: white;
+  min-height: 80vh;
 }
 .CartPage div {
   display: flex;
@@ -16,6 +17,8 @@
 .CartPage .CartSection {
   width: 65%;
   text-align: center;
+  height: 500px;
+  overflow-y: scroll;
 }
 .CartPage .CartSection img {
   width: 40%;
@@ -33,4 +36,23 @@
   color: white;
   border: 1px solid white;
   border-radius: 5px;
+}
+
+@media (width < 500px) {
+  .CartPage div {
+    flex-direction: column-reverse;
+  }
+  .CartPage div section {
+    width: 100% !important;
+  }
+  .CartPage div section div {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row;
+  }
+  .CartPage .CartSection {
+    margin-top: 10px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }/*# sourceMappingURL=Cart.module.css.map */

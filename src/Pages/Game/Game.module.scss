@@ -96,6 +96,9 @@
             }
         }
     }
+    .info{
+        width: 70%;
+    }
     .RequirementsT{
         .Requirements{
             display: flex;
@@ -134,7 +137,11 @@
             }
         }
     }
+    .info{
+        width: 100% !important;
+    }
     .RequirementsT{
+        width: 100% !important;
         .Requirements{
             width: 100% !important;
         }

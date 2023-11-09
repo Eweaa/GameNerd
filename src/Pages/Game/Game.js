@@ -110,7 +110,7 @@ const Game = () => {
                 </div>
             </aside>
         </div>
-        <div style={{width:'70%'}} className='p-4'>
+        <div className={[GameCSS.info, 'p-4'].join(' ')}>
             Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, Red Dead Redemption 2 is an epic tale of honor and loyalty at the dawn of the modern age. Includes Red Dead Redemption 2: Story Mode and Red Dead Online.
             <h6>
                 Red Dead Redemption 2

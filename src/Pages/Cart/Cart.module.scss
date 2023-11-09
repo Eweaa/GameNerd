@@ -1,6 +1,7 @@
 .CartPage{
     background: rgb(18 , 18, 18);
     color: white;
+    min-height: 80vh;
     div{
         display: flex;
         justify-content: space-around;
@@ -15,6 +16,8 @@
     .CartSection{
         width: 65%;
         text-align: center;
+        height: 500px;
+        overflow-y: scroll;
         img{
             width: 40%;
             margin-inline: auto;
@@ -31,5 +34,26 @@
             border: 1px solid white;
             border-radius: 5px;
         }
+    }
+}
+
+@media(width < 500px){
+    .CartPage{
+        div{
+            flex-direction: column-reverse;
+            section{
+                width: 100% !important;
+                div{
+                    padding: 0 !important;
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+        }
+        .CartSection{
+            margin-top: 10px;
+            height: fit-content;
+        }
+        
     }
 }
