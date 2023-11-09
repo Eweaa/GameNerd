@@ -5,15 +5,15 @@ import App from './App';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Auth from './Auth';
+// import Auth from './Auth';
 import News from './Pages/News/News';
 import Cart from './Pages/Cart/Cart';
 import Store from './Pages/Store/Store';
 import Game from './Pages/Game/Game';
 import MostPopular from './Pages/MostPopular/MostPopular';
 import Login from './Pages/Login/Login';
-import { ProtectedRoute } from './Auth/ProtectedRoute';
-import { AuthProvider } from './Auth/AuthContext';
+// import { ProtectedRoute } from './Auth/ProtectedRoute';
+// import { AuthProvider } from './Auth/AuthContext';
 import Home from './Pages/Home/Home';
 import store from './store';
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     },
     {
         path:'/',
-        element:<ProtectedRoute><App /></ProtectedRoute>,
+        element:<App />,
         children:[
             {
                 path:'/',
